@@ -113,11 +113,13 @@ background-position:center;
           }
           .fleetContainer {
             background-color: white;
-            min-height: 100vh;
+            min-height: auto;
             width: auto;
+            display: table;
+            justify-content: center;
           }
           .fleetContainer h2{
-            margin: 0;
+            padding-top: 20px;
           }
           
             .viewButton {
@@ -11041,5 +11043,4 @@ a.text-dark:hover, a.text-dark:focus {
   border-color: black;
 }
 /*# sourceMappingURL=style.css.map */
-
 

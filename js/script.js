@@ -6,15 +6,16 @@ var vehicles = [
     company: "Nissan",
     type: "car",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 4,
-    cost : 144,
-    fuel : 9.7,
-    minDays : 3,
-    maxDays : 10,
-    minPeople : 1,
-    maxPeople : 5,
+    cost : 129,
+    fuel : 8.5,
+    minPeople: 1,
+    maxPeople: 2,
+    minDays: 1,
+    maxDays: 10,
     photo : '2020-Nissan-Nissan-LEAF-SV-Plus-2-source-e1578666326115.jpg',
     description : 'Get the best of both worlds with instant acceleration and surprising power alongside an effortless, ' +
     'quiet drive performance — all with zero exhaust emissions. ' +
@@ -30,16 +31,17 @@ var vehicles = [
     company: "BMW",
     type: "car",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 4,
     color : 'blue',
     cost : 129,
     fuel : 8.5,
-    minDays : 1,
-    maxDays : 10,
-    minPeople : 1,
-    maxPeople : 2,
+    minPeople: 1,
+    maxPeople: 2,
+    minDay: 1,
+    maxDay: 10,
     photo : 'BMW_i3.jpg',
     description : 'Get in and experience the future at your fingertips. The BMW i3 is full of innovative  ' +
     'technologies it can use to confidently master your day-to-day life. It connects you to the  ' +
@@ -50,21 +52,22 @@ var vehicles = [
   },
 
   {
-    id: 103,
+    id: 104,
     name: "Model 3",
     company: "Tesla",
     type: "car",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 4,
     color : 'blue',
     cost : 129,
     fuel : 8.5,
-    minDays : 1,
-    maxDays : 10,
-    minPeople : 1,
-    maxPeople : 2,
+    minPeople: 1,
+    maxPeople: 2,
+    minDay: 1,
+    maxDay: 10,
     photo : 'Tesla_ModelS.png',
   },
   {
@@ -73,6 +76,7 @@ var vehicles = [
     company: "Renault",
     type: "car",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 4,
@@ -91,6 +95,7 @@ var vehicles = [
     company: "Tesla",
     type: "SUV",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 7,
@@ -109,6 +114,7 @@ var vehicles = [
     company: "Kia",
     type: "SUV",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 7,
@@ -127,6 +133,7 @@ var vehicles = [
     company: "MG",
     type: "SUV",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 5,
     seats: 7,
@@ -145,6 +152,7 @@ var vehicles = [
     company: "Hyundai",
     type: "SUV",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2019",
     doors: 5,
     seats: 7,
@@ -163,6 +171,7 @@ var vehicles = [
     company: "Ford",
     type: "Motor home",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2022",
     doors: 3,
     seats: 8,
@@ -181,6 +190,7 @@ var vehicles = [
     company: "Volkswagon",
     type: "Motor home",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 3,
     seats: 8,
@@ -199,6 +209,7 @@ var vehicles = [
     company: "LDV",
     type: "Motor home",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2019",
     doors: 3,
     seats: 8,
@@ -217,6 +228,7 @@ var vehicles = [
     company: "Nissan",
     type: "Motor home",
     trans: "Automatic",
+    motor: "Electric Vehicle",
     year: "2020",
     doors: 3,
     seats: 8,
@@ -233,8 +245,9 @@ var vehicles = [
     id: 401,
     name: "Livewire",
     company: "Harley Davidson",
-    type: "Motor bike",
-    trans: "manual",
+    type: "Motorbike",
+    trans: "Manual",
+    motor: "Electric Vehicle",
     year: "2019",
     seats: 2,
     minPeople: 1,
@@ -250,8 +263,9 @@ var vehicles = [
     id: 402,
     name: "SR/F",
     company: "Zero",
-    type: "Motor bike",
-    trans: "manual",
+    type: "Motorbike",
+    trans: "Manual",
+    motor: "Electric Vehicle",
     year: "2020",
     seats: 2,
     minPeople: 1,
@@ -267,14 +281,15 @@ var vehicles = [
     id: 403,
     name: "Vector",
     company: "Arc",
-    type: "Motor bike",
-    trans: "manual",
+    type: "Motorbike",
+    trans: "Manual",
+    motor: "Electric Vehicle",
     year: "2016",
     seats: 2,
     minPeople: 1,
     maxPeople: 1,
-    minDay: 1,
-    maxDay: 5,
+    minDays: 1,
+    maxDays: 5,
     cost: 109,
     fuel: 3.7,
     photo: "best-electric-motorcycles-2021-luxury-Arc-Vector-luxe-digital@2x.jpeg",
@@ -284,8 +299,9 @@ var vehicles = [
     id: 404,
     name: "LS-218",
     company: "Lightning",
-    type: "Motor bike",
-    trans: "manual",
+    type: "Motorbike",
+    trans: "Manual",
+    motor: "Electric Vehicle",
     year: "2020",
     seats: 2,
     minPeople: 1,
@@ -398,26 +414,28 @@ function initMap() {
   var  days, people ;
   ////      Date calculation     ////
 
-  $("#pickupDate").datepicker({
-    dateFormat: "yy-mm-dd",
-    changeMonth: true,
-    minDate: new Date(),
-    maxDate: "+1y",
-    onSelect: function (date) {
+  $('#pickupDate').datepicker({
+    dateFormat : 'yy-mm-dd',
+    changeMonth : true,
+    minDate :new Date(),
+    maxDate : '+1y',
+    onSelect : function(date){
       var selectDate = new Date(date);
-      var msecInADay = 86400000;
+      var msecInADay  = 86400000;
       var stDate = new Date(selectDate.getTime() + msecInADay);
-
-      $("#dropoffDate").datepicker("option", "minDate", stDate);
-      var enDate = new Date(selectDate.getTime() + 15 * msecInADay);
-
-      $("#dropoffDate").datepicker("option", "maxDate", enDate);
-    },
+  
+      $('#dropoffDate').datepicker('option', 'minDate', stDate);
+      var enDate = new Date(selectDate.getTime() + 10 * msecInADay);
+  
+      $('#dropoffDate').datepicker('option', 'maxDate', enDate);
+  
+    }
+  
   });
-
-  $("#dropoffDate").datepicker({
-    dateFormat: "yy-mm-dd",
-    changeMonth: true,
+  
+  $('#dropoffDate').datepicker({
+    dateFormat : 'yy-mm-dd',
+    changeMonth : true
   });
 
   $("#vechicleSearchBtn").click(function () {
@@ -503,17 +521,22 @@ function initMap() {
         '" class="card-img" alt="..."> </div>' +
         '<div class="col-md-7">' +
         '<div class="card-body row no-gutters">' +
-        '<h4 class="card-title col-12">' +
+        '<div class="col-12 mb-3">' +
+        '<h4 class="card-title d-inline mr-2">' +
+        vehicles[j].company +
+        "</h4>" +
+        '<h4 class="card-title d-inline mr-2">' +
         vehicles[j].name +
         "</h4>" +
-        '<h6 class="col-6">' +
-        vehicles[j].company +
-        "</h6>" +
+        '<h4 class="card-title d-inline">' +
+        vehicles[j].year +
+        "</h4>" +
+        "</div>" +
         '<h6 class="card-title col-6">' +
         vehicles[j].trans +
         "</h6>" +
         '<h6 class="card-title col-6">' +
-        vehicles[j].year +
+        vehicles[j].motor +
         "</h6>" +
         '<h6 class="card-title col-6">$' +
         vehicles[j].cost +
@@ -521,14 +544,15 @@ function initMap() {
         '<h6 class="card-title col-6">' +
         vehicles[j].fuel +
         "L/100Km</h6>" +
-        '<div class="col-6">' +
+        '<div class="col-12 text-right mt-5 mb-2">' +
+        '<p class="d-inline mr-2">Total:</p>'+
         '<h4 id="cost' +
         j +
-        '" class="text-right "></h4>' +
+        '" class="d-inline"></h4>' +
+        "</div>" +
         '<button id=" ' +
         vehicles[j].id +
-        '" href="#" class=" btn btn-primary float-right getQuote" onclick="getQuote()">Book Now</button>' +
-        "</div>" +
+        '" href="#" class=" btn btn-primary btn-block getQuote" onclick="getQuote()">Book Now</button>' +
         "</div>" +
         "</div>" +
         "</div>" +

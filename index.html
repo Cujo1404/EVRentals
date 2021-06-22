@@ -6,9 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/dot-luv/jquery-ui.min.css"
-    integrity="sha512-hGYkKzSMWaKWJ0MGIVy3h8Dk1VlEOQhR4NFB18jH3KCSzOhH5Zg6T54f526ne8eZVTlnFMcieY7Zlad9glJ9Mw=="
-    crossorigin="anonymous" />
+    <!-- jquery ui theme cupertino -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/cupertino/jquery-ui.min.css" integrity="sha512-ug/p2fTnYRx/TfVgL8ejTWolaq93X+48/FLS9fKf7AiazbxHkSEENdzWkOxbjJO/X1grUPt9ERfBt21iLh2dxg==" crossorigin="anonymous" />
 
             <!-- font awesome -->
             <script
@@ -114,7 +113,7 @@
                           Please select the number of people attending
                         </div>
                       </div>
-                    <button id="vechicleSearchBtn" class="btn btn-dark btn-lg mt-4 btn-block " type="submit">Find an EV</button>
+                    <button id="vechicleSearchBtn" class="btn btn-primary btn-lg mt-4 btn-block " type="submit">Find an EV</button>
                   </div>
                   </div>
                   </form>
@@ -124,7 +123,7 @@
 
       <div class="row clearfix">
 
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-3 mb-3 ">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-9 mt-12 mb-12">
 
 
           <div class="mb-3">
@@ -132,20 +131,25 @@
             <h5 class="bg-dark text-light p-2 rounded" style="display: none;">Map</h5>
             <div id="map" class="mb-3"></div>
           </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 mt-12 mb-12">
 
           <div class="bg-light rounded p-2 mb-3" >
           <div id="directionsPanel" class="animated bounce"></div>
           </div> 
+        </div> 
 
-        </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-12 mb-12">
 
 
-        <div id="results" class=" col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 mt-3 mb-3 ">
+
+        <div id="results">
 
       
 
 
         </div>
+      </div>
 
 
       </div>
@@ -174,8 +178,16 @@
         </div>
 
         <div class="col-md-12 mb-3">
+          <label for="validationCustom01">Email</label>
+          <input type="text" class="form-control" id="validationCustom0" placeholder="example@provider.com"  required>
+          <div class="valid-feedback">
+            Great!
+          </div>
+        </div>
+
+        <div class="col-md-12 mb-3">
           <label for="validationCustom01">Address</label>
-          <input type="text" class="form-control" id="validationCustom0" placeholder="eg.1234 Main St"  required>
+          <input type="text" class="form-control" id="validationCustom0" placeholder="eg. 123 Google St"  required>
           <div class="valid-feedback">
             Great!
           </div>
@@ -192,32 +204,23 @@
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <label for="validationCustom04">State</label>
-          <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+          <label for="validationCustom04">Suburb</label>
+          <input type="text" class="form-control" id="validationCustom04" placeholder="Suburb" required>
           <div class="invalid-feedback">
-            Please Enter a valid state.
+            Please Enter a valid suburb.
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <label for="validationCustom05">Zip</label>
-          <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+          <label for="validationCustom05">Post Code</label>
+          <input type="text" class="form-control" id="validationCustom05" placeholder="Post Code" required>
           <div class="invalid-feedback">
-            Please Enter a valid zip.
+            Please Enter a valid Post Code.
           </div>
         </div>
       </div>
 
-      <div class="form-row ">
+      <div class="form-row">
         <div class="col-md-9 mb-3">
-        <div class="form-check ">
-          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-          <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-          </label>
-          <div class="invalid-feedback">
-            You must agree before submitting.
-          </div>
-        </div>
       </div>
 
       <div class="col-md-3">
@@ -249,39 +252,13 @@
 
   <div class="fleetContainer" id="section2">
     <h2 class="text-center">Our Fleet</h2>
-
-  <div class="main2">
-
-    <!-- Trigger/Open The Modal -->
-    <!-- <button id="open">Open Modal</button> -->
-  
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-  
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Volkswagen Kombi</h2>
-  
-        <div class="imgContainer">
-        <img class="Kombi" src="images/id_buzz_concept_7399-2.jpg" alt="Volkswagen Kombi">
-  </div>
-        <p>$200 per day (min 2 days, max 15)</p> <br>
-        <p>Seats 6</p> <br>
-        <p>Equivalent to 17L per 100km</p>
-  
-        <button type="button" name="button">Book now</button>
-  
-      </div>
-  
-    </div>
   
   
     <!-- <h2>Section 2</h2> -->
   
     <div class="card" style="width: 18rem;">
       <div class="imgContainer">
-  <img src="images/1024px-Volkswagen_logo_2019.png" class="card-img-top" alt="Kiwi">
+  <img src="images/1024px-Volkswagen_logo_2019.png" class="card-img-top" alt="VW Logo">
   </div>
   <div class="card-body">
   <h5 class="card-title">VW</h5>
@@ -296,7 +273,7 @@
   
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
-  <img src="images/Nissan-Logo.png" class="card-img-top" alt="Nissan">
+  <img src="images/Nissan-Logo.png" class="card-img-top" alt="Nissan Logo">
   </div>
   <div class="card-body">
   <h5 class="card-title">Nissan</h5>
@@ -311,7 +288,7 @@
   
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
-  <img src="images/580b57fcd9996e24bc43c482.png" class="card-img-top" alt="Kiwi">
+  <img src="images/37678-1-hyundai-logo-transparent.png" class="card-img-top" alt="Hyundai Logo">
   </div>
   <div class="card-body">
   <h5 class="card-title">Hyundai</h5>
@@ -327,7 +304,7 @@
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
       <div class="imgContainer">
-  <img src="images/renault-logo-AD22506690-seeklogo.png" class="card-img-top" alt="Kiwi">
+  <img src="images/renault-logo-AD22506690-seeklogo.png" class="card-img-top" alt="Renault Logo">
   </div>
 </div>
   <div class="card-body">
@@ -343,13 +320,10 @@
 
   <button onclick="topFunction()" id="myBtn" class="top" title="Go to top"><i class="fas fa-2x fa-chevron-circle-up"></i></button>
   
-  </div>
-
-  <div class="main3">
   
     <div class="card" style="width: 18rem;">
       <div class="imgContainer">
-  <img src="images/Tesla-logo.png" class="card-img-top" alt="Kiwi">
+  <img src="images/Tesla-logo.png" class="card-img-top" alt="Tesla Logo">
   </div>
   <div class="card-body">
   <h5 class="card-title">Tesla</h5>
@@ -364,7 +338,7 @@
   
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
-  <img src="images/480px-BMW_logo_(gray).png" class="card-img-top" alt="Kiwi">
+  <img src="images/480px-BMW_logo_(gray).png" class="card-img-top" alt="BMW Logo">
   </div>
   <div class="card-body">
   <h5 class="card-title">BMW</h5>
@@ -380,11 +354,11 @@
   
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
-  <img src="images/37678-1-hyundai-logo-transparent.png" class="card-img-top" alt="Kiwi">
+  <img src="images/kia_rebrand_graphic_design_itsnicethat2.jpg" class="card-img-top" alt="Kia Logo">
   </div>
   <div class="card-body">
-  <h5 class="card-title">Hyundai</h5>
-  <p class="card-text">Hyundai</p>
+  <h5 class="card-title">Kia</h5>
+  <p class="card-text">Kia Niro</p>
   <!-- <button type="button" id="hyundai" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   View more about hyundai
   </button> -->
@@ -394,11 +368,11 @@
   
   <div class="card" style="width: 18rem;">
     <div class="imgContainer">
-  <img src="images/kisspng-fisker-automotive-fisker-karma-car-aston-martin-5b0a98de5d6932.7662721615274211503826.jpg" class="card-img-top" alt="Kiwi">
+  <img src="images/png-clipart-mg-mgb-mg-zr-car-sticker-labled-all-weather-tools-angle-text-thumbnail.png" class="card-img-top" alt="MG Logo">
   </div>
   <div class="card-body">
-  <h5 class="card-title">Fisker</h5>
-  <p class="card-text">Fisker</p>
+  <h5 class="card-title">MG</h5>
+  <p class="card-text">MG ZS</p>
   
   <!-- <button type="button" id="Fisker" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   View more about Fisker
@@ -406,10 +380,6 @@
   </div>
   
   </div>
-  
-  
-  </div>
-
 </div>
 
   <!-- home -->

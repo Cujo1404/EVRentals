@@ -645,9 +645,14 @@ function getQuote() {
 
 $("#bookNow").click(function () {
   swal({
-    title: "Booking Confirmed",
-    text: "Your booking id: C3PO117",
-    icon: "success"
+    text: '<img src="../images/EV_Rentals_logo.png" alt="EV Rentals logo" style="width:250px;">',
+    html: 'true',
+    title: 'Sweet, All Booked!',
+    text: 'Your booking is under control, check your email for confirmation.',
+    imageUrl: '../images/EV_Rentals_logo.png',
+    imageWidth: 250,
+    imageHeight: 50,
+    imageAlt: 'EV Rentals Logo',
   });
 });
 

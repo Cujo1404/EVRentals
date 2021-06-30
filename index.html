@@ -15,7 +15,7 @@
             crossorigin="anonymous"
           ></script>
 
-  <link rel="stylesheet" href="sass/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>EV Rentals</title>
 </head>
 
@@ -78,12 +78,12 @@
                     <div class="step3" style="display: none;">
                       <div class="col-md-12 mb-6">
                         <label for="validationCustom05">Start Date</label>
-                        <input type="text" class="form-control" id="pickupDate" required>
+                        <input type="text" class="form-control" id="pickupDate" readonly="readonly" required>
                         <div class="invalid-feedback">
                           Please select Date
                         </div>
                           <label for="validationCustom05">Drop off Date</label>
-                          <input type="text" class="form-control" id="dropoffDate" required>
+                          <input type="text" class="form-control" id="dropoffDate" readonly="readonly" required>
                           <div class="invalid-feedback">
                             Please select Date
                           </div>
@@ -119,7 +119,7 @@
                   </form>
     </div>
 
-    <div class="container resultsPage ">
+    <div class="container resultsPage hidden">
 
       <div class="row clearfix">
 
@@ -157,7 +157,7 @@
     </div>
 
 
-  <div id="bookingAddress" class="container">
+  <div id="bookingAddress" class="container hidden">
 
     <form class="needs-validation container bg-light rounded py-3 mt-3" novalidate>
       <div class="form-row clearfix">

@@ -24,6 +24,10 @@ body {
 background-position:center;
 }
 
+.hidden {
+  display: none;
+  }
+
 .logo {
   width: 250px;
   height: 50px;
